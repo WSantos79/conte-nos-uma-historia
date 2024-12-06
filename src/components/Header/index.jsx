@@ -1,5 +1,5 @@
 import { Container, Busca, Titulo, BotoesDiv,Div } from "./styles";
-import { BotaoPrimario } from "../../styles";
+import { BotaoPrimario } from "../../styles/elementos";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 

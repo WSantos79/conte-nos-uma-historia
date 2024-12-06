@@ -1,20 +1,12 @@
 import { CardContainer, Card, CardLogo, CardText }  from "./styles";
-
-
+import { exibirCards, teste } from "../../service/api";
 export default () => {
     return (
       <>
         <CardContainer>
-            <Card>
-                <CardLogo src="/path/to/your/logo.png" alt="Logo" />
-                <CardText>Seu texto aqui</CardText>
-            </Card>
+          {exibirCards()}
             
-            <Card>
-                <CardLogo src="/path/to/your/logo.png" alt="Logo" />
-                <CardText>Seu texto aqui</CardText>
-            </Card>
-        
+           
         </CardContainer>
       </>
     );

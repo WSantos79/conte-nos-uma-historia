@@ -4,6 +4,7 @@ import { textoBotao } from "./Variaveis";
 
 export const BotaoPrimario = styled.button`
   border: none;
+  border-radius: 5px;
   padding: 1rem;
   background: ${botaoNormal};
   
@@ -11,7 +12,7 @@ export const BotaoPrimario = styled.button`
   font-size: 1rem;
   line-height: 19px;
   color: ${textoBotao};
-
+  
   transition-duration: 300ms;  
   transition-timing-function: ease-out;
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fundoPrincipal, Destaque, fundoSecundario, textoPrimario,} from "../../styles/Variaveis";
+import { fundoPrincipal, textoFocoHover, fundoSecundario, textoPrimario,} from "../../styles/Variaveis";
 import search from "../../assets/images/search.svg";
 
 export const Container = styled.div`
@@ -35,7 +35,7 @@ export const Titulo = styled.h1`
     color: ${textoPrimario}; // Mantém a cor do texto do link
     
     &:hover {
-    color: ${Destaque}; /* Cor ao passar o mouse */
+    color: ${textoFocoHover}; /* Cor ao passar o mouse */
     color: inherit;
   }
 
@@ -69,7 +69,7 @@ export const Busca = styled.input`
 
 export const BotoesDiv = styled.div`
   margin:50px;  
-  width: 200px;
+  width: 15%;
   display: flex;
   justify-content: space-between;
   align-items: center; /* Alinha os itens verticalmente no centro */
