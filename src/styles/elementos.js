@@ -2,28 +2,24 @@ import styled from "styled-components";
 import { botaoNormal, botaoHover } from "./Variaveis"
 import { textoBotao } from "./Variaveis";
 
-
-export const BotaoPrimario = styled.a`
-  border: 1px solid #000;
+export const BotaoPrimario = styled.button`
+  border: 1px solid #FFF;
   border-radius: 10px;
   padding: 10px 20px;
   background: none;
-  z-index: 1;
-  position: relative;
-  overflow: hidden; /* Garante que os pseudo-elementos fiquem dentro do botão */
-  
   cursor: pointer;
-  
   font-weight: 400;
   font-size: 1rem;
   line-height: 19px;
   color: ${textoBotao};
+  transition-duration: 300ms;  
+  transition-timing-function: ease-out;
+  position: relative;
 
 
   display: block;
- 
-  text-align: center;
-  transition: color 0.4s ease-in-out;
+  overflow: hidden;
+   
 
   &::before,
   &::after,
@@ -33,7 +29,7 @@ export const BotaoPrimario = styled.a`
     position: absolute;
     width: 25%;
     height: 0;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.25);
     transition: height 0.4s ease-in-out;
   }
 
@@ -55,110 +51,25 @@ export const BotaoPrimario = styled.a`
   span::after {
     bottom: 0;
     left: 75%;
+    color: #000;
+    
   }
-  
+
   &:hover {
-    color: #fff;
+    color:  #000;
+    border: 1px solid #000;
+
     &::before,
     &::after,
     span::before,
     span::after {
       height: 100%;
-      
     }
   }
-
-  span {
-    position: relative;
-    z-index: 2; // retirar para voltar ao 'normal'
-    color: #fff;
-  }
-`;
-
-
-
-
-
-export const xxxx = styled.a`
-  border: 1px solid #000;
-  border-radius: 10px;
-  padding: 10px 20px;
-  background: none;
-
-  position: relative;
-  overflow: hidden; /* Garante que os pseudo-elementos fiquem dentro do botão */
- 
-  cursor: pointer;
-  
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 19px;
-  color: ${textoBotao};
-  
-  transition-duration: 300ms;  
-  transition-timing-function: ease-out;
-
-  &:before,
-  &:after,
-  span:before,
-  span:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 25.25%;
-    height: 0;
-    background-color: #000;
-    
-  }
-
-  &:before {
-    left: 0;
-  }
-
-  &:after {
-    left: 50%;    
-  }
-
-  span:before,
-  span:after {
-    top: auto;
-    bottom: 0;
-    
-  }
-
-  span:before {
-    left: 25%;
-  }
-
-  span:after {
-    left: 75%;
-  }
-
-  &:hover {
-    color: red;
-  }
-
-  &:hover:before,
-  &:hover:after,
-  span:hover:before,
-  span:hover:after {
-    height: 80px; /* Define a altura no hover */
-  }
-
-  span {
-    position: relative;
-   
-    color: #fff;
-    transition: color 0.4s ease-in-out;
-  }
-
-
-  @media (max-width: 1080px) {
-    font-weight: 600;
-    padding: 12px 1rem;
-    font-size: 14px
-  }
 `
+
+
+
 /*
 CSS Botao categorias
 

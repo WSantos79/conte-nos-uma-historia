@@ -7,7 +7,7 @@ export const headerFooter = "#D7BD9D";
 export const botaoNormal = "#ce9432";
 export const botaoHover = "#D9A788";
 export const botaoFoco = "#C28A6E";
-export const textoBotao = '#ffff'
+export const textoBotao = '#FFF'
 
 export const textoPrimario = "#392821";
 export const textoFocoHover = "#614b44";
