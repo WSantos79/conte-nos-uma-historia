@@ -1,18 +1,18 @@
+export const marginConteudoLaterais = '10%'
 
-
-export const fundoPrincipal = "#FAF3E0";
-export const fundoSecundario = "#F5E5C0";
+export const fundoPrincipal = "#fff";
+export const fundoSecundario = "linear-gradient(90deg, rgba(206,148,50,1) 0%, rgba(177,108,4,0.9724090319721639) 63%, rgba(206,148,50,1) 96%)";
 export const headerFooter = "#D7BD9D";
 
-export const botaoNormal = "#E7BFA1";
+export const botaoNormal = "#ce9432";
 export const botaoHover = "#D9A788";
 export const botaoFoco = "#C28A6E";
-export const textoBotao = 'white'
+export const textoBotao = '#ffff'
 
-export const textoPrimario = "#4A3832";
-export const textoSecundario = "#7D6656";
-export const textoFoco = "#C28A6E";
-export const textoFocoHover = "#A96E55";
+export const textoPrimario = "#392821";
+export const textoFocoHover = "#614b44";
+export const textoClicavel = "#2c1416"
+
 
 export const bordaLinha = "#D6C3A5";
 export const fundoInput = "#FFF8E6";
