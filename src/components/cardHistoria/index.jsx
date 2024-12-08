@@ -5,8 +5,6 @@ export default () => {
       <>
         <CardContainer>
           {exibirCards()}
-            
-           
         </CardContainer>
       </>
     );

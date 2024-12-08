@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { fundoPrincipal, textoFocoHover, fundoSecundario, textoPrimario,} from "../../styles/Variaveis";
 import search from "../../assets/images/search.svg";
 import { marginConteudoLaterais } from "../../styles/Variaveis";
+import { Link } from "react-router-dom";
 
-export const Faixa = styled.div`
+export const Header = styled.header`
   width: 100%; 
   height: 115px;
   
@@ -34,7 +35,7 @@ export const Div = styled.div `
  margin: 0;
 `
 
-export const Titulo = styled.h1`
+export const Titulo = styled(Link)`
     font-family: 'ATypewriterForMe', sans-serif;
 
     font-size: 2rem;
@@ -53,30 +54,7 @@ export const Titulo = styled.h1`
 
  
 `
-export const Busca = styled.input`
-  padding:0;
-  background: ${fundoPrincipal} 360px url(${search});
-  background-repeat: no-repeat;
-  background-position: center right 10px;
 
-  width: 450px;
-  height: 30px;
-
-  border-radius: 0px;  
-  text-indent: 10px;
-  box-shadow: none;
-  border: none;
-  
- &:focus {
-  outline: none; /* Remove o contorno padrão */
-  border: none;  /* Remove a borda padrão */
-  
-  
-  transform: scale(1.02); /* Aumenta o tamanho em 20% */
-  background-color: #f0f0f0; /* (Opcional) Muda a cor de fundo ao focar */
-  border: 1px solid #aaa; /* (Opcional) Adiciona uma borda personalizada */
-}
-`
 
 export const BotoesDiv = styled.div`
   margin: 0;  

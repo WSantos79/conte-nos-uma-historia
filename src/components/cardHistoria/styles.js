@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { marginConteudoLaterais, textoClicavel, textoFocoHover, textoPrimario, textoSecundario } from '../../styles/Variaveis';
+
 export const CardContainer = styled.section`
   
   margin: 5% ${marginConteudoLaterais} 0% ${marginConteudoLaterais}; // cima direito inferior esquerdo

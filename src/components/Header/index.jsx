@@ -1,5 +1,5 @@
-import { Faixa, Container, Busca, Titulo, BotoesDiv,Div } from "./styles";
-import { BotaoPrimario } from "../../styles/elementos";
+import { Header, Container, Titulo, BotoesDiv,Div } from "./styles";
+import { BotaoPrimario, InputBusca } from "../../styles/elementos";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -8,12 +8,12 @@ export default () => {
 
     return (
         <>
-            <Faixa>
+            <Header>
                 <Container>
                     <Div>
                         <Titulo to="/">Conte-nos uma história</Titulo>
                         
-                        <Busca
+                        <InputBusca
                         data-busca            
                         required
                         placeholder="Deixe sua curiosidade te guiar!"
@@ -41,20 +41,15 @@ export default () => {
                         } 
                         }}           
                     >
-                        </Busca>               
+                        </InputBusca>               
                     </Div>          
                     <BotoesDiv>
-                        <BotaoPrimario class="BotaoPrimario" to="/login" data-login>
-                        Entrar
-                        <span></span>
-                        </BotaoPrimario>
-                        <BotaoPrimario to="/login" data-login>
-                            <span>Cadastrar</span>
-                        </BotaoPrimario>
+                        <BotaoPrimario to="/login" data-login><span>Entrar</span></BotaoPrimario>
+                        <BotaoPrimario to="/register" data-register><span>Cadastrar</span></BotaoPrimario>
                     </BotoesDiv>
 
                 </Container>
-            </Faixa>
+            </Header>
         </>
     )
 }

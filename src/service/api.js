@@ -1,8 +1,7 @@
 import { Img, Card, CardUser, CardText, CardImg, UserImg, Div, UserName, CardHistoria, TituloHistoria, Traco, UserData, CardInteracao, ViewsComments, DivVC, Like, Likes, NLikes, Comments, LerMais, DivHist }  from "../components/cardHistoria/styles.js";
 
 export function exibirCards() {
-    const cards = [];
-      
+    const cards = [];     
     
     for (let i = 0; i < 12; i++) {
       cards.push(

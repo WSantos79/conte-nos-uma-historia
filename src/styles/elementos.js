@@ -1,8 +1,10 @@
 import styled from "styled-components";
-import { botaoNormal, botaoHover } from "./Variaveis"
+import { fundoPrincipal, textoPrimario } from "./Variaveis"
 import { textoBotao } from "./Variaveis";
+import { Link } from "react-router-dom";
+import search from "./../assets/images/search.svg";
 
-export const BotaoPrimario = styled.button`
+export const BotaoPrimario = styled(Link)`
   border: 1px solid #FFF;
   border-radius: 10px;
   padding: 10px 20px;
@@ -15,7 +17,7 @@ export const BotaoPrimario = styled.button`
   transition-duration: 300ms;  
   transition-timing-function: ease-out;
   position: relative;
-
+  text-decoration: none;
 
   display: block;
   overflow: hidden;
@@ -29,8 +31,8 @@ export const BotaoPrimario = styled.button`
     position: absolute;
     width: 25%;
     height: 0;
-    background-color: rgba(0, 0, 0, 0.25);
-    transition: height 0.4s ease-in-out;
+    background-color: rgba(255, 215, 0, 0.25);
+    transition: height 0.4s ease-in-out;  
   }
 
   &::before {
@@ -67,9 +69,112 @@ export const BotaoPrimario = styled.button`
     }
   }
 `
+export const BotaoSecundario = styled(Link)`
+  display: inline-block;
+  position: relative;
+  max-width: 160px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 45px;
+  color: ${textoPrimario};
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  overflow: hidden;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  rect {
+    fill: none;
+    stroke: ${textoPrimario};
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
+
+  &:hover {
+    background: transparent;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    rect {
+      stroke-width: 5;
+      stroke-dasharray: 15, 310;
+      stroke-dashoffset: 48;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+`
+
+export const InputBusca = styled.input`
+  padding:0;
+  background: ${fundoPrincipal} 360px url(${search});
+  background-repeat: no-repeat;
+  background-position: center right 10px;
+  
+  width: 450px;
+  height: 30px;
+
+  border-radius: 6px;  
+  text-indent: 10px;
+  box-shadow: none;
+  border: none;
+  
+ &:focus {
+  outline: none; /* Remove o contorno padrão */
+  border: none;  /* Remove a borda padrão */
+  
+  
+  transform: scale(1.02); /* Aumenta o tamanho em 20% */
+  background-color: #f0f0f0; /* (Opcional) Muda a cor de fundo ao focar */
+  border: 1px solid #aaa; /* (Opcional) Adiciona uma borda personalizada */
+}
+`
+
+export const InputGenerico = styled(InputBusca)`
+  
+  border: 1px solid gray;
+  background: #F8F8FF 360px;
+  
+  width: 350px;
+  height: 35px;
+
+  
+ &:focus {
+  background-color: #F8F8FF; 
+  border: 1px solid #000; 
+}
 
 
+`
+const margin = '25%';
 
+export const FormContainer = styled.section`
+  
+  margin: 5% ${margin} 0% ${margin}; // cima direito inferior esquerdo
+  padding: 1% 0 5% 0;
+  
+  border: 1px solid gray;  
+  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  `;
+export const H3 = styled.h3`
+  color: ${textoPrimario};
+`
 /*
 CSS Botao categorias
 
