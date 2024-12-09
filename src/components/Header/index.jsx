@@ -1,4 +1,4 @@
-import { Header, Container, Titulo, BotoesDiv,Div } from "./styles";
+import { Header, Container, Titulo, BotoesDiv,Div, Logo, LogoImg} from "./styles";
 import { BotaoPrimario, InputBusca } from "../../styles/elementos";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -9,6 +9,9 @@ export default () => {
     return (
         <>
             <Header>
+                <Logo to="/">
+                    <LogoImg src="/images/logo.webp" alt="Um livro aberto com uma pena, simbolizando as histórias"></LogoImg>
+                </Logo>
                 <Container>
                     <Div>
                         <Titulo to="/">Conte-nos uma história</Titulo>
