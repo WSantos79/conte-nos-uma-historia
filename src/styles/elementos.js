@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fundoPrincipal, fundoSecundario, textoPrimario } from "./Variaveis"
+import { fundoPrincipal, fundoSecundario, HeaderFooter, textoFocoHover, textoPrimario } from "./Variaveis"
 import { textoBotao } from "./Variaveis";
 import { Link } from "react-router-dom";
 
@@ -127,32 +127,34 @@ export const BotaoSecundario = styled(Link)`
 
 
 export const DivBotao = styled.section`
-  height: 100vh;
+  height:100%;
+  width: auto;
   overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
-  position: absolute;
+  flex-wrap: wrap;  
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   justify-content: center;
-  align-items: center;
-  background: #2d2d2d;
+  align-items: center;  
+  z-index: 2;
 `;
+const CorLine = `${textoPrimario}`;
 
 export const BotaoCategorias = styled(Link)`
-  color: white;
+  color: ${textoPrimario};
   padding: 0.7em calc(0.7em * 1.2);
   display: inline-block;
   border: 3px solid transparent;
   position: relative;
-  font-size: 1.5em;
+  font-size: 1em;
   cursor: pointer;
   letter-spacing: 0.07em;
-
+  text-decoration: none;
+  z-index: 2; 
   .text {
-    font-family: proxima-nova, monospace;
+    font-family: 'Raleway', sans-serif;
     transform: translate3d(0, 0.7em, 0);
     display: block;
     transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
@@ -165,7 +167,7 @@ export const BotaoCategorias = styled(Link)`
     left: calc(0.7em * 1.2);
     right: calc(0.7em * 1.2);
     height: 3px;
-    background: #f26522;
+    background: ${CorLine};
     transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s,
       right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
       left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
@@ -192,8 +194,8 @@ export const BotaoCategorias = styled(Link)`
 
 export const Line = styled.span`
   position: absolute;
-  background: #f26522;
-
+  background: ${CorLine};
+  z-index: 2;
   &.-right,
   &.-left {
     width: 3px;
