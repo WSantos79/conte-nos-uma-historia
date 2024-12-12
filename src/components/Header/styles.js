@@ -4,10 +4,11 @@ import { marginConteudoLaterais } from "../../styles/Variaveis";
 import { Link } from "react-router-dom";
 
 export const Header = styled.header`
-  width: 100%;  
+  width: 100%;
   height: 150px;
   margin: 0;
-  padding: 0; //
+  margin-bottom: 5%;
+  padding: 0;
   position: relative;
   background: ${HeaderFooter};
       
@@ -60,18 +61,12 @@ export const Div = styled.div `
  align-items: center; /* Centraliza verticalmente */
 `
 
-export const Titulo = styled(Link)`  
-    
+export const Titulo = styled(Link)`    
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Adiciona uma sombra ao texto
-
     font-family: 'ATypewriterForMe', sans-serif;
-
     font-size: 2rem;
     font-weight: bold;
-
-    margin: 0 40px 0 0px;
-    
+    margin: 0 40px 0 0px;    
     cursor: pointer; // Indica que é clicável
     text-decoration: none; // Remove o sublinhado padrão dos links
     color: ${textoPrimario}; // Mantém a cor do texto do link

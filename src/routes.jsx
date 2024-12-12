@@ -4,6 +4,7 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import Footer from "./components/Footer";
 
 
 
@@ -17,6 +18,7 @@ export default function router(){
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
             </Routes>
+            <Footer/>
         </BrowserRouter>
     )
 }
