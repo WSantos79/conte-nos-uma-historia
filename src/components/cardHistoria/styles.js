@@ -2,6 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { fundoSecundario, marginConteudoLaterais, textoClicavel, textoFocoHover, textoPrimario } from '../../styles/Variaveis';
 
+
+export const DivSelect = styled.div`
+  margin: 0 ${marginConteudoLaterais} 10px ${marginConteudoLaterais};
+  display: flex;
+  justify-content: flex-end;
+`
+
+export const Select = styled.select`
+  
+  
+`
+
 export const CardContainer = styled.section`
   
   margin: 0 ${marginConteudoLaterais} 0% ${marginConteudoLaterais}; // cima direito inferior esquerdo
@@ -9,6 +21,7 @@ export const CardContainer = styled.section`
   grid-template-columns: repeat(4, 1fr); /* 3 colunas de tamanho igual */
   gap: 20px; /* Espaçamento entre os cards */
 `;
+
 
 export const Card = styled.div`
   
