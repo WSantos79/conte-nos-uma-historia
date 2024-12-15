@@ -2,6 +2,7 @@ import { useState } from "react";
 import History from "../../components/History";
 import { HistoryContainer } from "../../styles/elementos";
 import { DivOpcoes, BotaoFont, Select, HistoriaContainer, Titulo } from "./styles";
+import { textoPrimario } from "../../styles/Variaveis";
 
 const textoHistoria = `
     Em uma floresta antiga, onde os ventos sussurravam segredos ancestrais e as sombras dançavam com a luz da lua, vivia uma árvore singular. Diziam que ela era a mais velha da floresta, suas raízes se entrelaçavam com a terra há séculos, testemunhando o passar das estações e a mudança das eras.
@@ -25,20 +26,23 @@ const textoHistoria = `
 
 
 export default () => {
-  const [fontSize, setFontSize] = useState(25);
-  const [fontFamily, setFontFamily] = useState("'ATypewriterForMe', sans-serif");
-    
+  const [fontSize, setFontSize] = useState(21);
+  const [fontFamily, setFontFamily] = useState('');
+  const [color, setFontCor] = useState('');
+
   const fontFamilyChange = (newFontFamily) => {
     setFontFamily(newFontFamily);
   };
 
-
+  const fontCorChange = (cor) => {
+    setFontCor(cor);
+  }
   const fontAumentar = () => {
-    setFontSize(fontSize + 2);
+    setFontSize(fontSize + 1);
    };
    
   const fontDiminuir = () => {
-    setFontSize(fontSize - 2);
+    setFontSize(fontSize - 1);
   };
 
   return (
@@ -50,11 +54,16 @@ export default () => {
           <option value="'ATypewriterForMe', sans-serif">Fonte 1</option>
           <option value="'Raleway', sans-serif">Fonte 2</option>
       </Select>
+      <Select onChange={(e) => fontCorChange(e.target.value)}>
+          <option value={textoPrimario}>Cor padrão</option>
+          <option value='#000'>Preto</option>
+          <option value={'white'}>Cores do autor</option>
+      </Select>
     <BotaoFont>Compartilhar</BotaoFont>
     </DivOpcoes>      
       <HistoryContainer>
         <Titulo>A Lenda da Árvore que Falava</Titulo>
-        <HistoriaContainer style={{ fontSize: `${fontSize}px`, fontFamily: `${fontFamily}` }}>{textoHistoria}</HistoriaContainer>       
+        <HistoriaContainer style={{ fontSize: `${fontSize}px`, fontFamily: `${fontFamily}`, color: `${color}` }}>{textoHistoria}</HistoriaContainer>       
       </HistoryContainer>
     </>
   );

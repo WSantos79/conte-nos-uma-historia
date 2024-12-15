@@ -21,6 +21,8 @@ export const StyledEditable = styled(Editable)`
   padding: 16px;
   border: 1px solid #ccc; 
   min-height: 150px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 `;
 
 export const Button = styled.button`
@@ -74,14 +76,4 @@ export const DivGeral = styled.div`
   width: 100%;
   height: 100%;
   
-`
-export const DivSlate = styled.div`
-border: 1px solid #ccc;
-border-radius: 4px;
-padding: 16px;
-font-family: Arial, sans-serif;
-white-space: pre-wrap;
-over-flowWrap: break-word;
-background: pink;
-
 `
