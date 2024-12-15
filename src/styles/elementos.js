@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fundoPrincipal, fundoSecundario, HeaderFooter, textoFocoHover, textoPrimario } from "./Variaveis"
+import { fundoPrincipal, fundoSecundario, HeaderFooter, segundaMarginLaterias, textoFocoHover, textoPrimario } from "./Variaveis"
 import { textoBotao } from "./Variaveis";
 import { Link } from "react-router-dom";
 
@@ -112,6 +112,9 @@ export const BotaoSecundario = styled(Link)`
       transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
     }
   }
+`
+export const BotoesSimples = styled(BotaoSecundario)`
+  text-transform: none;
 `
 export const DivBotao = styled.section`  
   height:100%;
@@ -297,11 +300,10 @@ export const InputGenerico = styled(InputBusca)`
 
 
 `
-const margin = '25%';
 
-export const FormContainer = styled.section`
+export const  FormateContainer = styled.section`
   
-  margin: 0 ${margin} 0% ${margin}; // cima direito inferior esquerdo
+  margin: 0 ${segundaMarginLaterias} 0% ${segundaMarginLaterias}; // cima direito inferior esquerdo
   padding: 1% 0 5% 0;
   
   border: 1px solid gray;  
@@ -313,7 +315,20 @@ export const FormContainer = styled.section`
   align-items: center;
   gap: 15px;
 
-  `;
+`;
+export const EditorContainer = styled(FormateContainer)`
+padding: 0;
+`
+export  const HistoryContainer = styled(FormateContainer)` 
+  border-radius: 8px; // Cantos arredondados para suavidade  
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 1.4); // Sombra leve para destaque
+`
 export const H3 = styled.h3`
   color: ${textoPrimario};
+`
+export const User = styled.h1`
+  color: ${textoPrimario};
+  font-family: 'ATypewriterForMe', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
 `

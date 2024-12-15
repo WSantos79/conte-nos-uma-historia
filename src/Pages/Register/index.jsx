@@ -1,11 +1,11 @@
-import { FormContainer,InputGenerico, BotaoSecundario, H3 } from "../../styles/elementos";
+import { FormateContainer,InputGenerico, BotaoSecundario, H3 } from "../../styles/elementos";
 
 
 
 export default () => {
   return (
     <>
-    <FormContainer>
+    <FormateContainer>
         <H3>Nome</H3>
         <InputGenerico type="text" required placeholder="Digite seu nome"></InputGenerico>
         <H3>Data Nascimento</H3>
@@ -22,7 +22,7 @@ export default () => {
           </svg>
           Cadastrar
         </BotaoSecundario>
-    </FormContainer>      
+    </FormateContainer>      
     </>
   );
 };

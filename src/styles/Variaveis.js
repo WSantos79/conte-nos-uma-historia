@@ -1,4 +1,5 @@
-export const marginConteudoLaterais = '10%'
+export const marginConteudoLaterais = '10%';
+export const segundaMarginLaterias = '25%';
 
 export const fundoPrincipal = "#FFFFFF";
 export const fundoSecundario = "#F5F5F5";

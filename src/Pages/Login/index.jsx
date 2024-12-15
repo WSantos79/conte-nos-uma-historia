@@ -1,4 +1,4 @@
-import { BotaoSecundario, FormContainer, InputGenerico, H3 } from "../../styles/elementos";
+import { BotaoSecundario, FormateContainer, InputGenerico, H3 } from "../../styles/elementos";
 
 
 
@@ -7,7 +7,7 @@ import { BotaoSecundario, FormContainer, InputGenerico, H3 } from "../../styles/
 export default () => {
   return (
     <>
-    <FormContainer>
+    <FormateContainer>
         <H3>Email</H3>
         <InputGenerico required placeholder="Seu email"></InputGenerico>
         <H3>Senha</H3>
@@ -18,7 +18,7 @@ export default () => {
           </svg>
           Entrar
         </BotaoSecundario>
-    </FormContainer>      
+    </FormateContainer>      
     </>
   );
 };
