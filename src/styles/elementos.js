@@ -303,7 +303,7 @@ export const InputGenerico = styled(InputBusca)`
 
 export const  FormateContainer = styled.section`
   
-  margin: 0 ${segundaMarginLaterias} 0% ${segundaMarginLaterias}; // cima direito inferior esquerdo
+  margin: 0 ${segundaMarginLaterias} 0% ${segundaMarginLaterias};
   padding: 1% 0 5% 0;
   
   border: 1px solid gray;  

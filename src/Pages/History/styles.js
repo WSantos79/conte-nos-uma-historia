@@ -21,6 +21,7 @@ export const HistoriaContainer = styled.h2`
   color: ${textoPrimario};  
   border-radius: 8px; // Cantos arredondados para suavidade  
   white-space: pre-wrap;
+  word-wrap: break-word;
   font-family: 'ATypewriterForMe', sans-serif;
 `;
 
@@ -28,14 +29,33 @@ export const HistoriaContainer = styled.h2`
 export const DivOpcoes = styled.div`
   margin: 0 25% 10px 25%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;  
+  gap: 10px;
 `
+export const Div = styled.div`  
+  display: flex;
+  justify-content: flex-start;
+  gap: 1px;
+  width: 10%;
+  
+`
+export const DivDois = styled.div`    
+  display: flex;    
+  gap: 10px;
+ ` 
 export const Select = styled.select`
     display: flex;
 
 `
 
 export const BotaoFont = styled.button`
-    width: 3%;
-    margin-right: 5px;
+    width: 50%;
+    margin-right: 5px;    
+    font-size: 1rem;
+    align-itens: center;
+`
+
+export const BotaoCompart = styled.button`
+  width: auto;
+  padding: 0 10px 0 10px;  
 `

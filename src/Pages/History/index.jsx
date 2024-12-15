@@ -1,12 +1,15 @@
 import { useState } from "react";
 import History from "../../components/History";
 import { HistoryContainer } from "../../styles/elementos";
-import { DivOpcoes, BotaoFont, Select, HistoriaContainer, Titulo } from "./styles";
+import { DivOpcoes, BotaoFont, Select, HistoriaContainer, Titulo, Div, BotaoCompart, DivDois } from "./styles";
 import { textoPrimario } from "../../styles/Variaveis";
+
+
+const tituloHistoria = `A Lenda da Árvore que Falava`
 
 const textoHistoria = `
     Em uma floresta antiga, onde os ventos sussurravam segredos ancestrais e as sombras dançavam com a luz da lua, vivia uma árvore singular. Diziam que ela era a mais velha da floresta, suas raízes se entrelaçavam com a terra há séculos, testemunhando o passar das estações e a mudança das eras.
-
+    
     Mas o que tornava essa árvore especial era a sua capacidade de falar. Sim, você leu certo! Ela conversava com os animais, com as flores e até mesmo com o vento. Seus galhos se moviam como braços, e suas folhas sussurravam palavras sábias e enigmáticas.
 
     Muitos animais vinham de longe para ouvi-la. A coruja sábia, com seus grandes olhos atentos, buscava seus conselhos sobre os mistérios da vida. O esquilo tagarela, sempre curioso, a questionava sobre as histórias da floresta. E o cervo, com sua natureza gentil, buscava conforto em suas palavras nos momentos de tristeza.
@@ -48,21 +51,32 @@ export default () => {
   return (
     <>
     <DivOpcoes>
-      <BotaoFont onClick={fontAumentar}>+</BotaoFont>
-      <BotaoFont onClick={fontDiminuir}>-</BotaoFont>
+      <Div>
+        <BotaoFont onClick={fontAumentar}>+</BotaoFont>
+        <BotaoFont onClick={fontDiminuir}>-</BotaoFont>
+      </Div>
+    <DivDois>
       <Select onChange={(e) => fontFamilyChange(e.target.value)}>
-          <option value="'ATypewriterForMe', sans-serif">Fonte 1</option>
-          <option value="'Raleway', sans-serif">Fonte 2</option>
+          <option value="'ATypewriterForMe', sans-serif">Fonte Estilizada</option>
+          <option value="'Raleway', sans-serif">Fonte Padrão</option>
       </Select>
       <Select onChange={(e) => fontCorChange(e.target.value)}>
           <option value={textoPrimario}>Cor padrão</option>
           <option value='#000'>Preto</option>
           <option value={'white'}>Cores do autor</option>
       </Select>
-    <BotaoFont>Compartilhar</BotaoFont>
-    </DivOpcoes>      
+      
+    </DivDois>
+      <BotaoCompart>Compartilhar</BotaoCompart>
+      
+      <Select   style={{width: '120px'}}>
+            <option value={`Capítulo Um`}>Capítulo Um</option>
+            <option value='#000'>Capítulo Dois</option>
+            <option value={'white'}>Capítulo Três</option>
+      </Select>
+    </DivOpcoes>
       <HistoryContainer>
-        <Titulo>A Lenda da Árvore que Falava</Titulo>
+        <Titulo>{tituloHistoria}</Titulo>
         <HistoriaContainer style={{ fontSize: `${fontSize}px`, fontFamily: `${fontFamily}`, color: `${color}` }}>{textoHistoria}</HistoriaContainer>       
       </HistoryContainer>
     </>
